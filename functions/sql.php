@@ -40,3 +40,14 @@ $getCurso = function () use ($conexao) {
     }
 
 };
+
+$deleteAluno = function ($data) use ($conexao) {
+    try {
+        $sql = $conexao->prepare("DELETE FROM alunos WHERE 
+                                    cpf = '$data'");
+        $sql->execute();
+    } catch (Exception $e) {
+        echo "<script>alert('Ocorreu um erro na comunicação com o banco os dados. Tente novamente mais tarde!');</script>";
+        echo "<script language=javascript>window.history.back();</script>";
+    }
+};

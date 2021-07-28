@@ -29,6 +29,7 @@
                 <th>Whatsapp</th>
                 <th>Curso</th>
                 <th>Data e hora do cadastro</th>
+                <th>#</th>
             </tr>
             </thead>
 
@@ -45,6 +46,7 @@
                 <td><?php echo $row['whatsapp']?></td>
                 <td><?php echo $row['curso']?></td>
                 <td><?php echo $row['caddata']?></td>
+                <td><a href="phpscripts/exluir.php?id=<?=$row['cpf']; ?>" class="btn btn-danger">Excluir</a> </td>
 
 
 
